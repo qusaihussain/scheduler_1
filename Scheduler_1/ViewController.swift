@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    let ref = FIRDatabase.database().reference(withPath: "events")
     
     var usernameArray = [String]()
     var startTime = String()
@@ -26,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     @IBOutlet weak var addUser: UIButton!
     @IBOutlet weak var createEvent: UIButton!
     @IBOutlet weak var eventDetails: UITextField!
+    // TODO: add length (time) of the event
     
     // MARK: IB Actions
     
@@ -37,14 +40,23 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     @IBAction func createEvent(_ sender: UIButton) {
-        var newEvent = Event()
+        /*var newEvent = Events()
         newEvent.name = eventName.text!
         newEvent.start = startTime
         newEvent.start = endTime
         newEvent.members = usernameArray
         newEvent.details = eventDetails.text!
         eventList.append(newEvent)
+ 
         
+        let newEvent = Event(name: eventName.text!, start: self.startDateText.text!, end: self.endDateText.text!)
+        
+        let groceryItemRef = self.ref.child((eventName.text?.lowercased())!)
+        
+        groceryItemRef.setValue(newEvent.toAnyObject())
+        */
+ 
+ 
         // resets all variable and clears the screen
         eventName.text = ""
         startDateText.text = ""
@@ -52,7 +64,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         eventDetails.text = ""
         usernameArray = []
         userTableView.reloadData()
-        EventsViewController.eventTableView.reloadData()
     }
 
     // MARK: TextField Delegate
@@ -140,7 +151,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
 }
 
-class Event {
+class Events {
     
     var name: String
     var start: String           // start date and time of the event
