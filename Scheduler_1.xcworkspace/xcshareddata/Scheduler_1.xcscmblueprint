@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "920F1E860045BAD9A2A7F811987CCC80BCF74A39",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "920F1E860045BAD9A2A7F811987CCC80BCF74A39" : 9223372036854775807,
+    "D077C63107B2C6D44B52502B2D47F9B2ACEEB8A8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8185E45A-5C6C-4772-B757-BFAE68263F47",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "920F1E860045BAD9A2A7F811987CCC80BCF74A39" : "Scheduler_1\/",
+    "D077C63107B2C6D44B52502B2D47F9B2ACEEB8A8" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Scheduler_1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Scheduler_1.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/benjaminbaker\/scheduler_1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "920F1E860045BAD9A2A7F811987CCC80BCF74A39"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/jwei98\/automated-scheduling",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D077C63107B2C6D44B52502B2D47F9B2ACEEB8A8"
+    }
+  ]
+}

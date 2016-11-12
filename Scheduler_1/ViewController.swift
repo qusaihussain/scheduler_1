@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    let ref = FIRDatabase.database().reference(withPath: "events")
+    let ref = FIRDatabaseReference!.self
     
     var usernameArray = [String]()
     var startTime = String()
@@ -40,22 +40,23 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     @IBAction func createEvent(_ sender: UIButton) {
-        /*var newEvent = Events()
+        /*
+        var newEvent = Events()
         newEvent.name = eventName.text!
         newEvent.start = startTime
         newEvent.start = endTime
         newEvent.members = usernameArray
         newEvent.details = eventDetails.text!
         eventList.append(newEvent)
- 
+        */
         
-        let newEvent = Event(name: eventName.text!, start: self.startDateText.text!, end: self.endDateText.text!)
+        let ref = FIRDatabase.database().reference(withPath: "events")
         
-        let groceryItemRef = self.ref.child((eventName.text?.lowercased())!)
+        let newEvent = Event(name: eventName.text!, start: startTime, end: endTime)
+        
+        let groceryItemRef = ref.child((eventName.text?.lowercased())!)
         
         groceryItemRef.setValue(newEvent.toAnyObject())
-        */
- 
  
         // resets all variable and clears the screen
         eventName.text = ""
@@ -134,6 +135,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         buttonUI()
         startDateText.delegate = self
