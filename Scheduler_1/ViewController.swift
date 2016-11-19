@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     var usernameArray = [String]()
     var startTime = String()
     var endTime = String()
+    var length = Double()
     var eventList = [Event]()
     
     // MARK: IB Outlets
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     @IBOutlet weak var addUser: UIButton!
     @IBOutlet weak var createEvent: UIButton!
     @IBOutlet weak var eventDetails: UITextField!
+    @IBOutlet weak var lengthTime: UITextField!
     // TODO: add length (time) of the event
     
     // MARK: IB Actions
@@ -40,19 +42,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     @IBAction func createEvent(_ sender: UIButton) {
-        /*
-        var newEvent = Events()
-        newEvent.name = eventName.text!
-        newEvent.start = startTime
-        newEvent.start = endTime
-        newEvent.members = usernameArray
-        newEvent.details = eventDetails.text!
-        eventList.append(newEvent)
-        */
         
         let ref = FIRDatabase.database().reference(withPath: "events")
         
-        let newEvent = Event(name: eventName.text!, start: startTime, end: endTime)
+        let newEvent = Event(name: eventName.text!, start: startTime, end: endTime, members: usernameArray, description: eventDetails.text!)
         
         let groceryItemRef = ref.child((eventName.text?.lowercased())!)
         
@@ -71,12 +64,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = UIDatePicker()
+        let timePicker = UIDatePicker()
+        timePicker.datePickerMode = UIDatePickerMode.countDownTimer
         startDateText.inputView = datePicker
         endDateText.inputView = datePicker
+        lengthTime.inputView = timePicker
         if textField == startDateText{
             datePicker.addTarget(self, action: #selector(ViewController.startDatePickerChanged(_:)), for: .valueChanged)
-        } else {
+        } else if textField == endDateText{
             datePicker.addTarget(self, action: #selector(ViewController.endDatePickerChanged(_:)), for: .valueChanged)
+        } else{
+            datePicker.addTarget(self, action: #selector(ViewController.lengthTimePickerChanged(_:)), for: .valueChanged)
         }
     }
     
@@ -96,9 +94,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         endTime = formatter.string(from: sender.date)
     }
     
+    func lengthTimePickerChanged(_ sender: UIDatePicker){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        lengthTime.text = formatter.string(from: sender.date)
+        length = Double(lengthTime.text!)!
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         startDateText.resignFirstResponder()
         endDateText.resignFirstResponder()
+        lengthTime.resignFirstResponder()
         return true
     }
     
@@ -140,6 +147,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         buttonUI()
         startDateText.delegate = self
         endDateText.delegate = self
+        lengthTime.delegate = self
         
         userTableView.dataSource = self
         userTableView.delegate = self
@@ -151,23 +159,5 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-class Events {
-    
-    var name: String
-    var start: String           // start date and time of the event
-    var end: String             // end date and time of the event
-    var members: [String]
-    var details: String
-    
-    init(){
-        name = ""
-        start = ""
-        end = ""
-        members = []
-        details = ""
-    }
-    // TODO: add getter functions for each variable of the class
 }
 

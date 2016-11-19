@@ -10,15 +10,17 @@
 		1479CEE6E5F012E89300C3DD /* Pods_Scheduler_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E80B2E5AA596E533FC946 /* Pods_Scheduler_1.framework */; };
 		3BC10F59427E61638FD1FFEE /* Pods_Scheduler_1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE56BB7B5414E170409A0D2C /* Pods_Scheduler_1UITests.framework */; };
 		5593623D494180186527F2D1 /* Pods_Scheduler_1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E523CF968B2CCCB4360D7F6 /* Pods_Scheduler_1Tests.framework */; };
+		B509F9B71DDFDCB700053174 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B509F9B61DDFDCB700053174 /* GoogleService-Info.plist */; };
 		B57559531DB303B500959ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57559521DB303B500959ECF /* AppDelegate.swift */; };
 		B57559551DB303B500959ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57559541DB303B500959ECF /* ViewController.swift */; };
-		B57559581DB303B500959ECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57559561DB303B500959ECF /* Main.storyboard */; };
 		B575595A1DB303B500959ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57559591DB303B500959ECF /* Assets.xcassets */; };
 		B575595D1DB303B500959ECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B575595B1DB303B500959ECF /* LaunchScreen.storyboard */; };
 		B57559681DB303B500959ECF /* Scheduler_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57559671DB303B500959ECF /* Scheduler_1Tests.swift */; };
 		B57559731DB303B500959ECF /* Scheduler_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57559721DB303B500959ECF /* Scheduler_1UITests.swift */; };
 		B59F960A1DBEA64F00E20D08 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F96091DBEA64F00E20D08 /* EventDetailsViewController.swift */; };
 		B59F960C1DBEA70E00E20D08 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F960B1DBEA70E00E20D08 /* EventsViewController.swift */; };
+		B5A950E01DD6D0490031D606 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A950DF1DD6D0490031D606 /* Login.swift */; };
+		B5A950E31DD6D2740031D606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A950E11DD6D2740031D606 /* Main.storyboard */; };
 		B5F97F4D1DD4FF1100F3F0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5F97F4C1DD4FF1100F3F0AB /* GoogleService-Info.plist */; };
 		B5F97F4F1DD5009600F3F0AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F97F4E1DD5009600F3F0AB /* User.swift */; };
 		B5F97F511DD502F500F3F0AB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F97F501DD502F500F3F0AB /* Event.swift */; };
@@ -47,10 +49,10 @@
 		84FD573F094D3ACB867CC2A1 /* Pods-Scheduler_1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler_1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scheduler_1UITests/Pods-Scheduler_1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A2D230AACB27AD6B1FE7C3EA /* Pods-Scheduler_1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler_1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scheduler_1UITests/Pods-Scheduler_1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD5E80B2E5AA596E533FC946 /* Pods_Scheduler_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scheduler_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B509F9B61DDFDCB700053174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B575594F1DB303B500959ECF /* Scheduler_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57559521DB303B500959ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Scheduler_1/AppDelegate.swift; sourceTree = "<group>"; };
 		B57559541DB303B500959ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Scheduler_1/ViewController.swift; sourceTree = "<group>"; };
-		B57559571DB303B500959ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B57559591DB303B500959ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B575595C1DB303B500959ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B575595E1DB303B500959ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		B57559741DB303B500959ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B59F96091DBEA64F00E20D08 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsViewController.swift; path = Scheduler_1/EventDetailsViewController.swift; sourceTree = "<group>"; };
 		B59F960B1DBEA70E00E20D08 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Scheduler_1/EventsViewController.swift; sourceTree = "<group>"; };
+		B5A950DF1DD6D0490031D606 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B5A950E21DD6D2740031D606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Scheduler_1/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5F97F4C1DD4FF1100F3F0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5F97F4E1DD5009600F3F0AB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5F97F501DD502F500F3F0AB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B5F97F4C1DD4FF1100F3F0AB /* GoogleService-Info.plist */,
+				B509F9B61DDFDCB700053174 /* GoogleService-Info.plist */,
 				B5F97F481DD4FD3400F3F0AB /* Models */,
 				B5F97F491DD4FD4600F3F0AB /* Controllers */,
 				B5F97F4A1DD4FD8000F3F0AB /* Layouts */,
@@ -188,6 +193,7 @@
 				B57559541DB303B500959ECF /* ViewController.swift */,
 				B59F960B1DBEA70E00E20D08 /* EventsViewController.swift */,
 				B59F96091DBEA64F00E20D08 /* EventDetailsViewController.swift */,
+				B5A950DF1DD6D0490031D606 /* Login.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 		B5F97F4A1DD4FD8000F3F0AB /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				B57559561DB303B500959ECF /* Main.storyboard */,
+				B5A950E11DD6D2740031D606 /* Main.storyboard */,
 				B575595B1DB303B500959ECF /* LaunchScreen.storyboard */,
 			);
 			name = Layouts;
@@ -330,8 +336,9 @@
 			files = (
 				B575595D1DB303B500959ECF /* LaunchScreen.storyboard in Resources */,
 				B5F97F4D1DD4FF1100F3F0AB /* GoogleService-Info.plist in Resources */,
+				B509F9B71DDFDCB700053174 /* GoogleService-Info.plist in Resources */,
 				B575595A1DB303B500959ECF /* Assets.xcassets in Resources */,
-				B57559581DB303B500959ECF /* Main.storyboard in Resources */,
+				B5A950E31DD6D2740031D606 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A950E01DD6D0490031D606 /* Login.swift in Sources */,
 				B59F960A1DBEA64F00E20D08 /* EventDetailsViewController.swift in Sources */,
 				B59F960C1DBEA70E00E20D08 /* EventsViewController.swift in Sources */,
 				B57559551DB303B500959ECF /* ViewController.swift in Sources */,
@@ -535,15 +543,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B57559561DB303B500959ECF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B57559571DB303B500959ECF /* Base */,
-			);
-			name = Main.storyboard;
-			path = Scheduler_1;
-			sourceTree = "<group>";
-		};
 		B575595B1DB303B500959ECF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -551,6 +550,14 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = Scheduler_1;
+			sourceTree = "<group>";
+		};
+		B5A950E11DD6D2740031D606 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A950E21DD6D2740031D606 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
